@@ -50,6 +50,19 @@ To design and implement a complete end-to-end test suite that validates the **Em
 
 ---
 
+## Empeo Registration System – Test Case Design
+
+| ID | Feature | Scenario | Steps | Expected Result |
+|----|----------|-----------|--------|----------------|
+| TC01 | Registration | Submit empty form | 1. Go to registration page<br>2. Click “Register” | Required field messages appear |
+| TC02 | Registration | Invalid phone number | 1. Enter “123” as phone<br>2. Click “Register” | Validation error “Invalid phone number” shown |
+| TC03 | Terms Checkbox | Submit without accepting terms | 1. Fill all fields<br>2. Leave Terms unchecked<br>3. Click “Register” | Error “Please accept terms” shown |
+| TC04 | Promo Code | Apply valid promo | 1. Enter `FREE15DAY`<br>2. Click “Apply” | Promo accepted successfully |
+| TC05 | OTP | Enter invalid OTP | 1. Enter wrong OTP `999999`<br>2. Submit | Error message “Invalid OTP” displayed |
+| TC06 | OTP | Enter expired OTP | 1. Enter old OTP<br>2. Submit | Error message “OTP expired” displayed |
+| TC07 | Happy Path | Full valid registration | 1. Fill all required data<br>2. Apply promo<br>3. Verify OTP<br>4. Submit | Registration completed successfully |
+---
+
 ## Setup & Installation
 
 ### Clone this repository
