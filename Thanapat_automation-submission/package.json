@@ -1,0 +1,43 @@
+{
+  "name": "thanapat-gofive-automatetester",
+  "version": "1.0.0",
+  "description": "Automation tests for empeo registration system",
+  "private": true,
+  "type": "commonjs",
+  "main": "index.js",
+  "license": "ISC",
+  "author": "",
+"scripts": {
+  "test": "npx playwright test",
+  "test:headed": "npx playwright test --headed",
+  "test:ui": "npx playwright test --ui",
+  "report": "npx playwright show-report",
+  "codegen": "npx playwright codegen $BASE_URL",
+  "fmt": "prettier -w ."
+},
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "dotenv": "^17.2.3",
+    "prettier": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "dependencies": {
+    "acorn": "^8.15.0",
+    "acorn-walk": "^8.3.4",
+    "arg": "^4.1.3",
+    "create-require": "^1.1.1",
+    "diff": "^4.0.2",
+    "make-error": "^1.3.6",
+    "playwright": "^1.56.1",
+    "playwright-core": "^1.56.1",
+    "undici-types": "^7.16.0",
+    "v8-compile-cache-lib": "^3.0.1",
+    "yn": "^3.1.1"
+  },
+  "keywords": []
+}

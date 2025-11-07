@@ -1,0 +1,43 @@
+name: Playwright Tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Set environment variables
+        run: |
+          echo "BASE_URL=${{ secrets.BASE_URL }}" >> $GITHUB_ENV
+          echo "TEST_PHONE=${{ secrets.TEST_PHONE }}" >> $GITHUB_ENV
+          echo "TEST_OTP=${{ secrets.TEST_OTP }}" >> $GITHUB_ENV
+          echo "TEST_PROMO=${{ secrets.TEST_PROMO }}" >> $GITHUB_ENV
+          echo "TEST_COMPANY=${{ secrets.TEST_COMPANY }}" >> $GITHUB_ENV
+          echo "TEST_FIRST=${{ secrets.TEST_FIRST }}" >> $GITHUB_ENV
+          echo "TEST_LAST=${{ secrets.TEST_LAST }}" >> $GITHUB_ENV
+          echo "TEST_EMAIL=${{ secrets.TEST_EMAIL }}" >> $GITHUB_ENV
+          echo "TEST_PASSWORD=${{ secrets.TEST_PASSWORD }}" >> $GITHUB_ENV
+
+      - name: Run Playwright tests
+        run: npm test
+
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report
