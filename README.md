@@ -1,4 +1,4 @@
-# Empeo Registration Automation Test
+# Empeo Registration Automation Test (Thanapat Nonpassopon)
 
 This project contains automated test scripts for the **Empeo registration system** — an HR platform designed to empower organizations through efficient HRM and HRD workflows.
 
