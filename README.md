@@ -56,8 +56,12 @@ To design and implement a complete end-to-end test suite that validates the **Em
 ```bash
 git clone https://github.com/ThanapatNon/GoFive-Empeo-Automation.git
 cd GoFive-Empeo-Automation
+```
+### Run the command to run the test
+```bash
 npm install
 npx playwright install --with-deps
+npm run test
 ```
 ---
 
