@@ -21,6 +21,18 @@ To design and implement a complete end-to-end test suite that validates the **Em
 
 ---
 
+## Tech Stack
+
+| Component | Technology |
+|------------|-------------|
+| Test Framework | Playwright |
+| Language | TypeScript |
+| Test Runner | @playwright/test |
+| CI/CD | GitHub Actions |
+| Formatter | Prettier |
+
+---
+
 ## Test Scenarios (High-Level)
 
 | Category | Test Case | Description |
@@ -36,17 +48,6 @@ To design and implement a complete end-to-end test suite that validates the **Em
 |  | Expired OTP | Simulates an expired OTP scenario |
 | **Success Path** | Full registration | Completes registration with all valid data |
 
----
-
-## Tech Stack
-
-| Component | Technology |
-|------------|-------------|
-| Test Framework | Playwright |
-| Language | TypeScript |
-| Test Runner | @playwright/test |
-| CI/CD | GitHub Actions |
-| Formatter | Prettier |
 
 ---
 
@@ -61,6 +62,7 @@ To design and implement a complete end-to-end test suite that validates the **Em
 | TC05 | OTP | Enter invalid OTP | 1. Enter wrong OTP `999999`<br>2. Submit | Error message “Invalid OTP” displayed |
 | TC06 | OTP | Enter expired OTP | 1. Enter old OTP<br>2. Submit | Error message “OTP expired” displayed |
 | TC07 | Happy Path | Full valid registration | 1. Fill all required data<br>2. Apply promo<br>3. Verify OTP<br>4. Submit | Registration completed successfully |
+
 ---
 
 ## Setup & Installation
