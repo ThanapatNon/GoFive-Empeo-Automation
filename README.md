@@ -50,7 +50,7 @@ To design and implement a complete end-to-end test suite that validates the **Em
 
 ---
 
-## Empeo Registration System – Test Case Design
+## Test Case Design
 
 | ID | Feature | Scenario | Steps | Expected Result |
 |----|----------|-----------|--------|----------------|
