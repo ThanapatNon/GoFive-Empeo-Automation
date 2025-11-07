@@ -63,6 +63,11 @@ npm install
 npx playwright install --with-deps
 npm run test
 ```
+
+### After that, to see the HTML Report run this command
+```bash
+npx playwright show-report
+```
 ---
 
 ## How to Reproduce
